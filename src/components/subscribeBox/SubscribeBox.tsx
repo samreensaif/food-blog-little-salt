@@ -1,8 +1,24 @@
-import React from "react";
+"use client";
+
+
+import React, { useState } from "react";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
+import { toast, Toaster } from "sonner"; // Import toast functionality
 
 function SubscribeBox() {
+  const [email, setEmail] = useState("");
+
+  const handleSubscribe = () => {
+    if (email.trim() === "") {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
+    toast.success("Subscribed successfully!");
+    setEmail(""); // Clear the input field after subscribing
+  };
+
   return (
     <section className="relative">
       <div className="bg-[url('/main2.jpg')] bg-cover bg-center h-[90vh] flex items-center justify-center">
@@ -17,27 +33,24 @@ function SubscribeBox() {
         <div className="flex flex-col sm:flex-row items-center justify-center mt-6 sm:mt-12 gap-2">
           <Input
             placeholder="Enter your email address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)} // Update state on input change
             className="w-[280px] sm:w-[320px] h-[48px] sm:h-[56px] pl-[20px] sm:pl-[26px] text-lg sm:text-xl text-black bg-white"
           />
 
-          <Button className="bg-transparent border-2 border-white text-white w-[150px] sm:w-[166px] h-[48px] sm:h-[56px] text-lg sm:text-[20px]">
+          <Button
+            onClick={handleSubscribe} // Trigger the subscription action
+            className="bg-transparent border-2 border-white text-white w-[150px] sm:w-[166px] h-[48px] sm:h-[56px] text-lg sm:text-[20px]"
+          >
             Get Started
           </Button>
         </div>
       </div>
+
+      {/* Toaster for showing notifications */}
+      <Toaster richColors />
     </section>
   );
 }
 
 export default SubscribeBox;
-
-
-
-
-
-
-
-
-
-
-
