@@ -9,7 +9,7 @@ import Link from "next/link";
 import React from "react";
 
 import { client } from "@/sanity/lib/client";
-import PostCreator from "@/components/comments/comments";
+
 
 async function Blog() {
   interface BlogProps {
