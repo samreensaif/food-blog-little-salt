@@ -37,7 +37,7 @@ const res: AboutSectionProps[] = await client.fetch(`
       {res.map((item:AboutSectionProps, index:number) => {
         return (
 
-          <div key={index} className='w-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] max-w-[600px] h-[200px] border-2 border-gray-300 flex flex-col space-y-2 px-4 sm:px-10'>
+          <div key={index} className='w-full shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)] max-w-[600px] h-[200px] border-2 border-gray-300 flex flex-col space-y-2 px-4 sm:px-10 hover:scale-105 transition-transform duration-1000'>
             <div className='flex items-center justify-center rounded-full mt-4 w-14 h-14 bg-[#7C4EE4]'>
               <Image src={item.cardImage} alt="chef" width={30} height={30} className='text-white' />
             </div>

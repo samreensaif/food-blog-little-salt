@@ -5,6 +5,7 @@
 
 import AboutSection from '@/components/aboutSection/AboutSection';
 import { client } from '@/sanity/lib/client';
+
 import React from 'react';
 
 async function AboutPage() {

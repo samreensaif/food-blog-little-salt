@@ -54,7 +54,7 @@ async function Categories() {
 
           {res.map((item: CategoriesCard, index: number) => (
              
-             <div key={index} className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-6 items-start shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]">
+             <div key={index} className="flex flex-col  sm:flex-row gap-4 sm:gap-6 mb-6 items-start shadow-[4.0px_8.0px_8.0px_rgba(0,0,0,0.38)]">
                <Image
                  src={item.img}
                  width={150}
@@ -62,7 +62,7 @@ async function Categories() {
                  className="w-full sm:w-[180px] h-auto object-cover hover:scale-110 transition-all duration-1000 rounded-md ease-in-out"
                  alt={item.title}
                />
-               <div className="flex flex-col gap-3">
+               <div className="flex flex-col gap-3 px-4 md:px-1">
                  <p className="font-semibold text-base sm:text-lg md:text-xl">
                    {item.title}
                  </p>
@@ -72,15 +72,19 @@ async function Categories() {
                    <span>{item.date}</span>
                  </p>
 
-                 <div className="inline-block bg-[#7C4EE4] px-2 py-1 mt-2 hover:underline">
-                   <Link
-                     href={`/categories/id=${item.id}?id=${item.id}&Title=${item.title}&Date=${item.date}&Img=${item.img}&Para=${item.para}&Minutes=${item.minutes}`}
-                   >
-                     <p className="text-white flex items-center text-sm sm:text-base hover:underline ">
-                       Read More <MoveRight className="ml-2" />
-                     </p>
-                   </Link>
-                 </div>
+                 <div className="inline-block bg-[#7C4EE4] px-2 py-1 mt-2 hover:underline rounded-md mb-3">
+  <Link
+    href={`/categories/id=${item.id}?id=${item.id}&Title=${item.title}&Date=${item.date}&Img=${item.img}&Para=${item.para}&Minutes=${item.minutes}`}
+  >
+    <span className="text-white group text-sm sm:text-base flex items-center hover:underline">
+      Read More
+      <MoveRight
+        className="opacity-0 transform translate-x-[-10px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-1000 ml-2"
+      />
+    </span>
+  </Link>
+</div>
+
                </div>
              </div>
            

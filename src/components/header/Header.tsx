@@ -1,5 +1,6 @@
 
 
+import { MoveRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -31,20 +32,11 @@ function Header() {
 
           {/* Contact Button */}
           <Link href="/contact">
-            <button className="inline-flex items-center bg-[#7C4EE4] text-white border-0 py-2 px-4 xsm:py-2 xsm:px-5 focus:outline-none hover:bg-purple-400 hover:underline hover:scale-110 transition-all duration-300 rounded text-sm xsm:text-base mt-4 md:mt-0">
-              Contact Us
-              <svg
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                className="w-4 h-4 ml-1"
-                viewBox="0 0 24 24"
-              >
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </button>
+          <button className="inline-flex items-center bg-[#7C4EE4] text-white border-0 py-2 px-4 xsm:py-2 xsm:px-5 focus:outline-none hover:underline hover:scale-110 transition-all duration-300 rounded text-sm xsm:text-base mt-4 md:mt-0 group">
+  Contact Us
+  <MoveRight className="opacity-0 transform translate-x-[-10px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-1000 ml-2" />
+</button>
+
           </Link>
         </div>
       </header>

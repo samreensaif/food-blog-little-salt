@@ -40,7 +40,7 @@ function SubscribeBox() {
 
           <Button
             onClick={handleSubscribe} // Trigger the subscription action
-            className="bg-transparent border-2 border-white text-white w-[150px] sm:w-[166px] h-[48px] sm:h-[56px] text-lg sm:text-[20px]"
+            className="bg-transparent hover:bg-purple-500 border-2 border-white text-white w-[150px] sm:w-[166px] h-[48px] sm:h-[56px] text-lg sm:text-[20px]"
           >
             Get Started
           </Button>

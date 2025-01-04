@@ -91,8 +91,9 @@ async function FeaturedRecipes() {
                 <Link
                   href={`/recipe/id=${recipe.id}?recipeTitle=${recipe.recipeTitle}&recipeImage=${recipe.recipeImage}&description=${recipe.description}&date=${recipe.date}&detailDescription=${recipe.detailDescription}&minutes=${recipe.minutes}`}
                 >
-                  <p className="inline-block text-white p-2 mt-2 hover:underline bg-[#7C4EE4] text-sm sm:text-base">
-                    Read More <MoveRight className="inline-flex ml-2" />
+                  <p className="inline-block text-white group p-2 mt-2 hover:underline bg-[#7C4EE4] text-sm sm:text-base rounded-md">
+                    Read More
+                    <MoveRight className="inline-block opacity-0 transform translate-x-[-10px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-1000 ml-2" />
                   </p>
                 </Link>
               </div>

@@ -174,7 +174,7 @@ const deleteFunction = async (_id: string) => {
           />
           <div className="flex justify-end">
             <Toaster richColors/>
-            <Button className="w-[161px]" onClick={postComment}>{btnName}</Button>
+            <Button className="w-[161px] bg-purple-500 text-white hover:bg-purple-400 text-[18px] " onClick={postComment}>{btnName}</Button>
           </div>
         </div>
       )}

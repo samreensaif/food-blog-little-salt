@@ -39,7 +39,7 @@ async function Blog() {
   `);
 
   return (
-    <div className="py-6 bg-purple-200">
+    <div className="py-6 ">
       <div className="w-full text-center mt-[80px] mb-7">
         <h1
            
@@ -76,8 +76,8 @@ async function Blog() {
                 <h1 className="text-xl sm:text-2xl font-bold">{item.title}</h1>
 
                 <Link href={`/blog/id?id=${item.id}&title=${item.title}&description=${item.description}&minutes=${item.minutes}&date=${item.date}&blogImage=${item.blogImage}`}>
-                  <button className="inline-block text-white p-2 mt-2 hover:underline bg-[#7C4EE4]">
-                    Read More <MoveRight className="inline-flex ml-2" />
+                  <button className="inline-flex rounded-md group text-white p-2 mt-2 hover:underline bg-[#7C4EE4]">
+                    Read More <MoveRight className=" opacity-0 transform translate-x-[-10px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-1000 ml-2" />
                   </button>
                 </Link>
               </div>
